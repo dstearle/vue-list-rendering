@@ -9,6 +9,8 @@
                 <h1>Rendering Lists in Vue</h1>
                 
                 <hr>
+
+                <app-header></app-header>
                 
                 <router-view></router-view>
                 

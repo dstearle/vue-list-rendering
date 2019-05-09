@@ -11,7 +11,8 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 const router = new VueRouter ({
-    
+  
+  // Prevents hashtag from appearing in topbar directory
   mode: 'history',
   
   routes: routes

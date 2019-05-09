@@ -1,8 +1,8 @@
 <template>
     
-    <div>
+    <div class="py-5">
 
-        well shit
+        Welcome to the home page. Feel free to click around and see different lists.
         
     </div>
     

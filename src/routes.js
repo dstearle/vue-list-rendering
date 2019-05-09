@@ -1,5 +1,5 @@
 import Home from './components/Home.vue';
-//import Header from './components/Header.vue';
+import Header from './components/Header.vue';
 
 // Imports for the lists
 import ListOne from './components/lists/ListOne.vue';
@@ -10,9 +10,10 @@ import ListFive from './components/lists/ListFive.vue';
 
 export const routes = [
     
+    // Default page set by ''
     { path: '', component: Home},
 
-    //{ path: '', component: Header},
+    { path: '', component: Header},
     
     { path: '/listOne', component: ListOne},
 
