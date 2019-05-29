@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id="app">
+    <div class="container">
         <h2 class="py-5">Top 10 Dinosaurs</h2>
         <table class="table table-bordered">
             <tr>
