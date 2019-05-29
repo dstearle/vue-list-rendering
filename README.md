@@ -1,29 +1,16 @@
 # vue-list-rendering
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<strong>What is this project? :</strong>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- The vue-list-rendering project is a collection of different lists made in vue.
 
-### Run your tests
-```
-npm run test
-```
+<br>
 
-### Lints and fixes files
-```
-npm run lint
-```
+<strong>Setting up a cloned repo of this project :</strong>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Requires: Bootstrap, Vue.js, Vue Router
+- To install Vue Router you can install the node package with (npm install vue-router). Link for reference https://router.vuejs.org/installation.html#direct-download-cdn.
+- To run the application use (npm run serve).
+
+<br>
