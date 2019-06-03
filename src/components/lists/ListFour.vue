@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="py-5">Top Jurassic Park 10 Herbivores</h2>
         <ul class="list-group">
-            <li v-for="(score, dinosaurs) of topTenHerbivores" class="list-group-item d-flex justify-content-between align-items-center">
+            <li v-for="(score, dinosaurs) of topTenHerbivores" v-bind:key="(score, dinosaurs)" class="list-group-item d-flex justify-content-between align-items-center">
                 {{ dinosaurs }}
                 <span class="badge badge-primary badge-pill">{{ score }}</span>
             </li>

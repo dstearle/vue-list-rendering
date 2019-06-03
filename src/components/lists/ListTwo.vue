@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="py-5">Top 10 Isla Sorna Dinosaurs</h2>
         <ul class="list-group">
-            <li class="list-group-item" v-for="dinosaur in topTenDinosaurs">{{ dinosaur }}</li>            
+            <li class="list-group-item" v-for="dinosaur in topTenDinosaurs" v-bind:key="dinosaur">{{ dinosaur }}</li>            
         </ul>
     </div>
 </template>
