@@ -16,6 +16,8 @@
         <router-link to="/listFive" tag="li"><button type="button" class="btn btn-outline-primary">List Five</button></router-link>
 
         <router-link to="/listSix" tag="li"><button type="button" class="btn btn-outline-dark">List Six</button></router-link>
+
+        <router-link to="/listSeven" tag="li"><button type="button" class="btn btn-outline-dark">List Seven</button></router-link>
                                
     </ul>
     
