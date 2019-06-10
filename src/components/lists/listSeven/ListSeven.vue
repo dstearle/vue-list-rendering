@@ -7,7 +7,7 @@
         <div class="min-h-screen bg-grey-darker p-8">
             <div class="max-w-sm mx-auto">
                 <div class="card">
-                    <h1 class="text-2xl font-bold mb-6">InGen Contacts</h1>
+                    <h1 class="bg-dark text-white p-3">InGen Contacts</h1>
 
                     <sortable-list v-model="contacts">
                     <div class="contact-list" slot-scope="{ items: contacts }">
@@ -25,6 +25,7 @@
                             </div>
                             </div>
                             <sortable-handle>
+                              <div>this</div>
                             </sortable-handle>
                         </div>
                         </sortable-item>
@@ -54,32 +55,32 @@ export default {
       contacts: [
         {
           id: 1,
-          name: "Alfreda Ferreira",
-          email: "alfreda.ferreira@example.com",
+          name: "John Hammond",
+          email: "slammin.hammond@ingen.com",
           avatar: "https://randomuser.me/api/portraits/med/women/6.jpg"
         },
         {
           id: 2,
-          name: "Leevi Wirtanen",
-          email: "leevi.wirtanen@example.com",
+          name: "Robert Muldoon",
+          email: "muldoon.safaris@ingen.com",
           avatar: "https://randomuser.me/api/portraits/med/men/19.jpg"
         },
         {
           id: 3,
-          name: "Kaitlin Sutton",
-          email: "kaitlin.sutton@example.com",
+          name: "Henry Wu",
+          email: "wu.tang.clan@ingen.com",
           avatar: "https://randomuser.me/api/portraits/med/women/2.jpg"
         },
         {
           id: 4,
-          name: "Alice Wilson",
-          email: "alice.wilson@example.com",
+          name: "Denis Nedry",
+          email: "mr.goodbytes@ingen.com",
           avatar: "https://randomuser.me/api/portraits/med/women/62.jpg"
         },
         {
           id: 5,
-          name: "Etienne Roy",
-          email: "etienne.roy@example.com",
+          name: "Ray Arnold",
+          email: "big.ray@ingen.com",
           avatar: "https://randomuser.me/api/portraits/med/men/4.jpg"
         }
       ]
@@ -90,5 +91,46 @@ export default {
 </script>
 
 <style>
+
+.contact-list {
+  border-top-width: 1px;
+  border-color: #f1f5f8;
+}
+.contact-list-item {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom-width: 1px;
+  border-color: #f1f5f8;
+}
+.contact-list-item.draggable-source--is-dragging {
+  background-color: #f1f5f8;
+}
+.contact-list-item.draggable-source--is-dragging > * {
+  opacity: 0;
+}
+.contact-list-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-list-avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  display: block;
+  margin-right: 0.5rem;
+}
 
 </style>
