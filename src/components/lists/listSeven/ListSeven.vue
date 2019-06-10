@@ -33,7 +33,7 @@
                   </div>
                   
                   <!-- Favicon that allows user to move contact -->
-                  <sortable-handle>
+                  <sortable-handle class="pointer">
                     <div>this</div>
                   </sortable-handle>
 
@@ -104,6 +104,9 @@ export default {
 
 <style>
 
+.pointer {
+  cursor: grab;
+}
 .contact-list {
   border-top-width: 1px;
   border-color: #f1f5f8;
