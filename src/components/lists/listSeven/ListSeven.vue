@@ -1,40 +1,52 @@
 <template>
     <div class="container">
 
-        <h2 class="py-5">InGen Contact List</h2>
-        <p>Feel free to sort the list however you like with the blocks on the right</p>
+      <h2 class="py-5">InGen Contact List</h2>
+      <p>Feel free to sort the list however you like with the blocks on the right</p>
 
-        <div class="min-h-screen bg-grey-darker p-8">
-            <div class="max-w-sm mx-auto">
-                <div class="card">
-                    <h1 class="bg-dark text-white p-3">InGen Contacts</h1>
+      <div class="card">
 
-                    <sortable-list v-model="contacts">
-                    <div class="contact-list" slot-scope="{ items: contacts }">
-                        <sortable-item v-for="contact in contacts" :key="contact.id">
-                        <div class="contact-list-item">
-                            <div class="contact-list-contact">
-                            <img :src="contact.avatar" class="contact-list-avatar" alt="">
-                            <div>
-                                <div class="contact-list-name">
-                                {{ contact.name }}
-                                </div>
-                                <div class="contact-list-email">
-                                {{ contact.email }}
-                                </div>
-                            </div>
-                            </div>
-                            <sortable-handle>
-                              <div>this</div>
-                            </sortable-handle>
-                        </div>
-                        </sortable-item>
+        <h1 class="card-header bg-dark text-white p-3">InGen Contacts</h1>
+
+        <div class="card-body">
+
+          <sortable-list v-model="contacts">
+
+            <div class="contact-list" slot-scope="{ items: contacts }">
+              
+              <sortable-item v-for="contact in contacts" :key="contact.id">
+
+                <div class="contact-list-item">
+                  <div class="contact-list-contact">
+                    <!-- Contact's profile image -->
+                    <img :src="contact.avatar" class="contact-list-avatar" alt="">
+                    <div>
+                      <!-- Contact's name -->
+                      <div class="font-weight-bold">
+                        {{ contact.name }}
+                      </div>
+                      <!-- Contact's email  -->
+                      <div class="text-muted">
+                        {{ contact.email }}
+                      </div>
                     </div>
-                    </sortable-list>
+                  </div>
+                  
+                  <!-- Favicon that allows user to move contact -->
+                  <sortable-handle>
+                    <div>this</div>
+                  </sortable-handle>
 
                 </div>
+
+              </sortable-item>
+
             </div>
+
+          </sortable-list>
+
         </div>
+      </div>
     </div>
 </template>
 
