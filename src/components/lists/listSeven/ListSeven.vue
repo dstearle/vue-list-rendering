@@ -113,14 +113,8 @@ export default {
 }
 .contact-list-item {
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
   border-bottom-width: 1px;
@@ -133,11 +127,7 @@ export default {
   opacity: 0;
 }
 .contact-list-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .contact-list-avatar {
