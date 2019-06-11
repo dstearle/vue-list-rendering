@@ -8,9 +8,13 @@ function move(items, oldIndex, newIndex) {
     ...items.slice(oldIndex + 1, items.length)
   ]
 
+  // Keeps track of list item position
   return [
+    // All of the items before the lit item
     ...itemRemovedArray.slice(0, newIndex),
+    // The old position of said list item
     items[oldIndex],
+    // All of the items after the list item
     ...itemRemovedArray.slice(newIndex, itemRemovedArray.length)
   ]
 }
@@ -34,6 +38,8 @@ export default {
     }
   },
   mounted() {
+
+    // Allows for sorting of list items
     new Sortable(this.$el, {
       draggable: `.${this.itemClass}`,
       handle: `.${this.handleClass}`,
@@ -41,6 +47,7 @@ export default {
         constrainDimensions: true
       }
     }).on("sortable:stop", ({ oldIndex, newIndex }) => {
+      // Updates the new position of a list item
       this.$emit("input", move(this.value, oldIndex, newIndex))
     })
   },

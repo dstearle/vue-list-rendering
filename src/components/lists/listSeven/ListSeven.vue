@@ -14,9 +14,12 @@
 
             <div class="contact-list" slot-scope="{ items: contacts }">
               
+              <!-- Grabs each list item for the contact list -->
               <sortable-item v-for="contact in contacts" :key="contact.id">
 
                 <div class="contact-list-item">
+
+                  <!-- Contact -->
                   <div class="contact-list-contact">
                     <!-- Contact's profile image -->
                     <img :src="contact.avatar" class="contact-list-avatar" alt="">

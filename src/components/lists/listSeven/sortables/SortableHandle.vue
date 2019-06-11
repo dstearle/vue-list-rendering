@@ -1,5 +1,7 @@
 <script>
 
+// Renders the handle that allows you to move each list item
+
 export default {
   inject: ["sortableListHandleClass"],
   mounted() {

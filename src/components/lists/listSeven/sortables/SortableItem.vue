@@ -1,5 +1,7 @@
 <script>
 
+// Renders each individual list item
+
 export default {
   inject: ["sortableListItemClass"],
   mounted() {
