@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h2 class="py-5">Top 10 Jurassic Park Carnivores</h2>
-        <p>Click on "score" to sort the list from ascending or descending order!</p>
+        <p>Click on "Score" to sort the list from ascending or descending order!</p>
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="predator of topTenCarnivoresSorted">
+                <tr v-for="predator of topTenCarnivoresSorted" v-bind:key="predator">
                     <td>{{ predator.name }}</td>
                     <td>{{ predator.score }}</td>
                 </tr>
