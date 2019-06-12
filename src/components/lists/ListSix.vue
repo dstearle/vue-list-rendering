@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="predator of topTenCarnivoresSorted" v-bind:key="predator">
+                <tr v-for="predator of topTenCarnivoresSorted">
                     <td>{{ predator.name }}</td>
                     <td>{{ predator.score }}</td>
                 </tr>
