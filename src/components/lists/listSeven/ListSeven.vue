@@ -72,7 +72,7 @@ export default {
           id: 1,
           name: "John Hammond",
           email: "slammin.hammond@ingen.com",
-          avatar: "https://randomuser.me/api/portraits/med/women/6.jpg"
+          avatar: "./../avatars/test.jpg"
         },
         {
           id: 2,
@@ -100,7 +100,7 @@ export default {
         }
       ]
     }
-  }
+  },
 }
 
 </script>
