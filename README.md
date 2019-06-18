@@ -13,6 +13,7 @@
 - To install Vue Router you can install the node package with (npm install vue-router). Link for reference https://router.vuejs.org/installation.html#direct-download-cdn.
 - To install @shopify/draggable you can install the node package with (npm i @shopify/draggable). Link for reference
 https://www.npmjs.com/package/@shopify/draggable.
+- For quick install use (npm install).
 - To run the application use (npm run serve).
 
 <br>
