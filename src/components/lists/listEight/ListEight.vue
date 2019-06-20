@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-grey-darker p-8">
     <div class="max-w-sm mx-auto">
       <accordion-list>
-        <!-- <accordion-item :item-id="1">
+        <accordion-item :item-id="1">
           <template slot="header">
             Item A
           </template>
@@ -25,7 +25,7 @@
           <template slot="content">
             Sed porttitor mattis egestas. Duis nec rhoncus ligula. Etiam pellentesque mattis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vel dapibus nulla. Phasellus lobortis nibh et faucibus tincidunt. Phasellus non iaculis turpis, vitae gravida lacus.
           </template>
-        </accordion-item> -->
+        </accordion-item>
       </accordion-list>
     </div>
   </div>
@@ -33,12 +33,12 @@
 
 <script>
 import AccordionList from "./accordion/AccordionList.vue"
-// import AccordionItem from "./accordion/AccordionItem.vue"
+import AccordionItem from "./accordion/AccordionItem.vue"
 
 export default {
   components: {
     AccordionList,
-    // AccordionItem
+    AccordionItem
   },
   data() {
     return {}
