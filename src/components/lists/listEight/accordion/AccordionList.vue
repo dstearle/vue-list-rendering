@@ -31,4 +31,10 @@ export default {
     background-color: #fff;
     }
 
+    *,
+    :after,
+    :before {
+    border: 0 solid #dae1e7;
+    }
+
 </style>
