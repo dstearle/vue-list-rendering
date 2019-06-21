@@ -63,4 +63,9 @@ export default {
     padding: 1rem 1.5rem;
     }
 
+    [role="button"],
+    button {
+    cursor: pointer;
+    }
+
 </style>
