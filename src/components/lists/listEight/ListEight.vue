@@ -1,6 +1,10 @@
 <template>
+
   <div class="min-h-screen bg-grey-darker p-8">
     <div class="max-w-sm mx-auto">
+
+      <h2 class="py-5">InGen Contact List</h2>
+      <p>Feel free to sort the list however you like with the blocks on the right</p>
       <accordion-list>
         <accordion-item :item-id="1">
           <template slot="header">
