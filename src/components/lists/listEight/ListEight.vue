@@ -3,20 +3,20 @@
   <div class="min-h-screen bg-grey-darker p-8">
     <div class="max-w-sm mx-auto">
 
-      <h2 class="py-5">InGen Contact List</h2>
-      <p>Feel free to sort the list however you like with the blocks on the right</p>
+      <h2 class="py-5">Jurassic World Tours</h2>
+      <p>Feel free to click below to see available types of tours!</p>
       <accordion-list>
         <accordion-item :item-id="1">
           <template slot="header">
-            Item A
+            Gyrosphere Tour
           </template>
           <template slot="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus auctor massa, vitae posuere sem tincidunt eget. Duis non vestibulum diam. Pellentesque eleifend interdum mollis. Donec porttitor dui enim. Maecenas a semper sem. Nunc molestie turpis vitae sem auctor, non venenatis velit ultricies.
+            Roll around with our dinosaurs in our glass-encased Gyrospheres. Be on the lookout for Apatosaurus, Parasaurolophus, Stegosaurus, Triceratops, and many more! Your in-sphere monitor will help you identify these relatively docile dinosaurs. Our advanced invisible fence technology assures the animals will stay in designated zones without unnecessary bars or cages. And if you venture too close. our automated system will roll your Gyrosphere back to a safe distance. suitable for older children and adults.
           </template>
         </accordion-item>
         <accordion-item :item-id="2">
           <template slot="header">
-            Item B
+            Safari Truck Tour
           </template>
           <template slot="content">
             Vestibulum nec urna non nisi viverra vehicula ut sed metus. Cras scelerisque condimentum nunc ut mattis. Curabitur euismod sagittis efficitur. Cras vel orci consectetur, ullamcorper magna vitae, sodales mauris. Aliquam tempus volutpat mi. Nunc vitae molestie ante. In sed varius tortor.
@@ -24,7 +24,7 @@
         </accordion-item>
         <accordion-item :item-id="3">
           <template slot="header">
-            Item C
+            Helicopter Tour
           </template>
           <template slot="content">
             Sed porttitor mattis egestas. Duis nec rhoncus ligula. Etiam pellentesque mattis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vel dapibus nulla. Phasellus lobortis nibh et faucibus tincidunt. Phasellus non iaculis turpis, vitae gravida lacus.
