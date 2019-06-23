@@ -4,7 +4,7 @@
     <div class="max-w-sm mx-auto">
 
       <h2 class="py-5">Jurassic World Tours</h2>
-      <p>Feel free to click below to see available types of tours!</p>
+      <p>Feel free to click below to see our available types of tours!</p>
       <accordion-list>
         <accordion-item :item-id="1">
           <template slot="header">
@@ -19,7 +19,7 @@
             Safari Truck Tour
           </template>
           <template slot="content">
-            Vestibulum nec urna non nisi viverra vehicula ut sed metus. Cras scelerisque condimentum nunc ut mattis. Curabitur euismod sagittis efficitur. Cras vel orci consectetur, ullamcorper magna vitae, sodales mauris. Aliquam tempus volutpat mi. Nunc vitae molestie ante. In sed varius tortor.
+            Explore the entire island on one of our safari tours. From prehistoric swamps and grassy lowlands to sandy lagoons and rocky hills you will be able to experience the many unique environments built to house over 30 species! A tour guide will also provide in depth details of what you see and treats to feed the dinosaurs (The friendly ones of course!).
           </template>
         </accordion-item>
         <accordion-item :item-id="3">
