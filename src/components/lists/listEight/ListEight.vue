@@ -27,7 +27,7 @@
             Helicopter Tour
           </template>
           <template slot="content">
-            Sed porttitor mattis egestas. Duis nec rhoncus ligula. Etiam pellentesque mattis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vel dapibus nulla. Phasellus lobortis nibh et faucibus tincidunt. Phasellus non iaculis turpis, vitae gravida lacus.
+            Our most premium tour for our most distinguished guests! The helicopter tour will give you a birds eye view of the park and special access to otherwise inaccessible regions. The highlight of the tour will be a picnic by waterfalls and chance to swim in a jungle lagoon!
           </template>
         </accordion-item>
       </accordion-list>
