@@ -11,33 +11,37 @@
 </template>
 
 <script>
-export default {
-  inject: ["accordionListState"],
-  props: ["itemId"],
-  computed: {
-    active() {
-      return this.accordionListState.activeItem === this.itemId
+
+  export default {
+
+    inject: ["accordionListState"],
+    props: ["itemId"],
+    computed: {
+      active() {
+        return this.accordionListState.activeItem === this.itemId
+      }
+    },
+    methods: {
+      toggle() {
+        this.accordionListState.activeItem = this.active ? null : this.itemId
+      }
     }
-  },
-  methods: {
-    toggle() {
-      this.accordionListState.activeItem = this.active ? null : this.itemId
-    }
+
   }
-}
+
 </script>
 
 <style>
 
-    .accordion-item {
+  .accordion-item {
     border-bottom-width: 1px;
-    }
+  }
 
-    .accordion-item:last-child {
+  .accordion-item:last-child {
     border-bottom-width: 0;
-    }
+  }
 
-    .accordion-item-header {
+  .accordion-item-header {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -53,19 +57,19 @@ export default {
     align-items: center;
     font-weight: 600;
     padding: 1rem 1.5rem;
-    }
+  }
 
-    .accordion-item-body {
+  .accordion-item-body {
     color: #606f7b;
     font-size: 0.875rem;
     line-height: 1.5;
     border-top-width: 1px;
     padding: 1rem 1.5rem;
-    }
+  }
 
-    [role="button"],
-    button {
+  [role="button"],
+  button {
     cursor: pointer;
-    }
+  }
 
 </style>
