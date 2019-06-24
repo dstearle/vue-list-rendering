@@ -21,5 +21,4 @@ https://www.npmjs.com/package/@shopify/draggable.
 <strong>To Do List:</strong>
 
 - Fix HMR error (sockjs related from previous project?)
-- Do commenting for ListEight
 - Fix avatars for ListSeven
