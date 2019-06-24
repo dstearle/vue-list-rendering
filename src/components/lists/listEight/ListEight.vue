@@ -48,17 +48,17 @@
 
 <script>
 
-import AccordionList from "./accordion/AccordionList.vue"
-import AccordionItem from "./accordion/AccordionItem.vue"
+  import AccordionList from "./accordion/AccordionList.vue"
+  import AccordionItem from "./accordion/AccordionItem.vue"
 
-export default {
-  components: {
-    AccordionList,
-    AccordionItem
-  },
-  data() {
-    return {}
+  export default {
+    components: {
+      AccordionList,
+      AccordionItem
+    },
+    data() {
+      return {}
+    }
   }
-}
 
 </script>

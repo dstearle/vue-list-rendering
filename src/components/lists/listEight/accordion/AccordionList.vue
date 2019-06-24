@@ -5,20 +5,27 @@
 </template>
 
 <script>
-export default {
-  provide() {
-    return {
-      accordionListState: this.sharedState
-    }
-  },
-  data() {
-    return {
-      sharedState: {
-        activeItem: 1
+
+  export default {
+
+    // Allows you to provide an item without using props
+    provide() {
+      return {
+        // Grabs the data object to be provided to the list
+        accordionListState: this.sharedState
+      }
+    },
+    data() {
+      return {
+        // Allows us to make the activeItem reactive
+        sharedState: {
+          // The current active list item
+          activeItem: 1
+        }
       }
     }
   }
-}
+
 </script>
 
 <style>
