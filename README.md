@@ -17,3 +17,8 @@ https://www.npmjs.com/package/@shopify/draggable.
 - To run the application use (npm run serve).
 
 <br>
+
+<strong>To Do List:</strong>
+
+- Fix HMR error (sockjs related from previous project?)
+- Do commenting for ListEight
