@@ -24,4 +24,4 @@ https://www.npmjs.com/package/@shopify/draggable.
 - Make better navbar for application
 - Fix avatars for ListSeven
 - Fix dropdown favicon for ListEight
-- Create search/filter list for ListNine
+- Complete search/filter list for ListNine
