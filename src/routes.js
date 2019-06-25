@@ -10,6 +10,7 @@ import ListFive from './components/lists/ListFive.vue';
 import ListSix from './components/lists/ListSix.vue';
 import ListSeven from './components/lists/listSeven/ListSeven.vue';
 import ListEight from './components/lists/listEight/ListEight.vue';
+import ListNine from './components/lists/ListNine.vue';
 
 export const routes = [
     
@@ -33,5 +34,7 @@ export const routes = [
     { path: '/listSeven', component: ListSeven},
 
     { path: '/listEight', component: ListEight},
+
+    { path: '/listNine', component: ListNine},
         
 ];
