@@ -1,11 +1,13 @@
 <template>
   <div class="accordion-item">
     <div @click="toggle" role="button" class="accordion-item-header">
+      <!-- Slot for accordion header -->
       <slot name="header"></slot>
       <!-- Accordion drop icon area -->
       <div>+</div>
     </div>
     <div class="accordion-item-body" v-show="active">
+      <!-- Slot for accordino content -->
       <slot name="content"></slot>
     </div>
   </div>

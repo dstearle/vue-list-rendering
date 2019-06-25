@@ -1,5 +1,6 @@
 <template>
   <div class="accordion-list">
+    <!-- Slot for the entire list -->
     <slot></slot>
   </div>
 </template>
