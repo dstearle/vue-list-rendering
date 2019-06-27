@@ -36,3 +36,13 @@ export default {
   }
 }
 </script>
+
+<style>
+
+  .form-label {
+    display: block;
+    color: #606f7b;
+    font-weight: 600;
+  }
+
+</style>
