@@ -1,24 +1,31 @@
 <template>
 
-  <div class="card">
-    
-    <div class="card-body">
+  <div class="container">
 
-      <div class="mb-4">
+    <h2 class="py-5">InGen Contact List</h2>
+    <p>Feel free to sort the list however you like with the blocks on the right</p>
 
-        <label class="form-label mb-2">Favorite Thrash Band</label>
-        <search-select></search-select>
-        
+    <div class="card">
+      
+      <div class="card-body">
+
+        <div class="mb-4">
+
+          <label class="form-label mb-2">Favorite Thrash Band</label>
+          <search-select></search-select>
+          
+        </div>
+
+        <div class="text-right">
+
+          <button type="button" class="btn btn-primary">Save Changes</button>
+
+        </div>
+
       </div>
-
-      <div class="text-right">
-
-        <button type="button" class="btn btn-primary">Save Changes</button>
-
-      </div>
-
+      
     </div>
-    
+
   </div>
 
 </template>
