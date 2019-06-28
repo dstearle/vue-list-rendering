@@ -1,59 +1,86 @@
 <template>
+
   <div class="search-select" :class="{ 'is-active': isOpen }">
+
+    <!-- Button that controls search list -->
     <button @click="open" type="button" class="search-select-input">
+
+      <!-- Displays selected value -->
       <span v-if="value !== null">{{ value }}</span>
+
+      <!-- Default value if nothing has been selected -->
       <span v-else class="search-select-placeholder">Select a band...</span>
+
     </button>
+
+    <!-- Shows the dropdown list when activated -->
     <div v-show="isOpen" class="search-select-dropdown">
+
+      <!-- Input for user -->
       <input class="search-select-search">
+
+      <!-- List of items to be shown -->
       <ul class="search-select-options">
+
+        <!-- Generates each item in the search list -->
         <li class="search-select-option"
           v-for="option in options"
           :key="option"
           @click="select(option)"
         >{{ option }}</li>
+
       </ul>
+
       <!-- <div class="search-select-empty">No results found</div> -->
+
     </div>
+
   </div>
+  
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      isOpen: false,
-      value: null,
-      options: [
-        "Anthrax",
-        "Dark Angel",
-        "Death Angel",
-        "Destruction",
-        "Exodus",
-        "Flotsam and Jetsam",
-        "Kreator",
-        "Megadeth",
-        "Metallica",
-        "Overkill",
-        "Sepultura",
-        "Slayer",
-        "Testament"
-      ]
-    }
-  },
-  methods: {
-    open() {
-      this.isOpen = true
+
+  export default {
+
+    data() {
+      return {
+        isOpen: false,
+        value: null,
+        options: [
+          "Anthrax",
+          "Dark Angel",
+          "Death Angel",
+          "Destruction",
+          "Exodus",
+          "Flotsam and Jetsam",
+          "Kreator",
+          "Megadeth",
+          "Metallica",
+          "Overkill",
+          "Sepultura",
+          "Slayer",
+          "Testament"
+        ]
+      }
     },
-    close() {
-      this.isOpen = false
-    },
-    select(option) {
-      this.value = option
-      this.close()
+
+    methods: {
+      // Opens the search list when clicked by user
+      open() {
+        this.isOpen = true
+      },
+      close() {
+        this.isOpen = false
+      },
+      select(option) {
+        this.value = option
+        this.close()
+      }
     }
+
   }
-}
+
 </script>
 
 <style>
