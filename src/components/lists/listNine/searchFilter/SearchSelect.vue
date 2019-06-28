@@ -72,7 +72,11 @@
       // Filters the list with user input
       filteredOptions() {
 
-        return this.options.filter(option => option.startsWith(this.search))
+        return this.options.filter(option => {
+
+          return option.toLowerCase().startsWith(this.search.toLowerCase())
+          
+        })
 
       }
 
