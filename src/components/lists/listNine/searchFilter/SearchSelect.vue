@@ -75,7 +75,7 @@
         return this.options.filter(option => {
 
           return option.toLowerCase().startsWith(this.search.toLowerCase())
-          
+
         })
 
       }
@@ -93,7 +93,11 @@
       },
       // Selects the item from the list
       select(option) {
+        // Sets value to match the selected option
         this.value = option
+        // Resets the search to empty
+        this.search = ''
+        // Closes the search when done
         this.close()
       }
     }
