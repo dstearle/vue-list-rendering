@@ -17,14 +17,15 @@
     <div v-show="isOpen" class="search-select-dropdown">
 
       <!-- Input for user -->
-      <input class="search-select-search">
+      <input class="search-select-search" v-model="search">
 
       <!-- List of items to be shown -->
       <ul class="search-select-options">
 
         <!-- Generates each item in the search list -->
+        <!-- @click="select(option)" allows us to select an option from the list -->
         <li class="search-select-option"
-          v-for="option in options"
+          v-for="option in filteredOptions"
           :key="option"
           @click="select(option)"
         >{{ option }}</li>
@@ -47,6 +48,7 @@
       return {
         isOpen: false,
         value: null,
+        search: '',
         options: [
           "Anthrax",
           "Dark Angel",
@@ -65,14 +67,27 @@
       }
     },
 
+    computed: {
+
+      // Filters the list with user input
+      filteredOptions() {
+
+        return this.options.filter(option => option.startsWith(this.search))
+
+      }
+
+    },
+
     methods: {
       // Opens the search list when clicked by user
       open() {
         this.isOpen = true
       },
+      // Closes the search list when an option is selected
       close() {
         this.isOpen = false
       },
+      // Selects the item from the list
       select(option) {
         this.value = option
         this.close()
