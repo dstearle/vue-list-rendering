@@ -92,13 +92,15 @@
       open() {
         this.isOpen = true,
         this.$nextTick(() => {
-          // When search is opened puts focus into the input for user
+          // When search is opened puts focus into the search input for user
           this.$refs.search.focus()
         })
       },
       // Closes the search list when an option is selected
       close() {
-        this.isOpen = false
+        this.isOpen = false,
+        // Sets focus back to input area when search is closed
+        this.$refs.button.focus()
       },
       // Selects the item from the list
       select(option) {
