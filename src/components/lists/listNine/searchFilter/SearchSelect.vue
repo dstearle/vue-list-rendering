@@ -32,7 +32,7 @@
 
       </ul>
 
-      <!-- <div class="search-select-empty">No results found</div> -->
+      <div v-show="filteredOptions.length === 0" class="search-select-empty">No results found for "{{ search }}"</div>
 
     </div>
 
@@ -97,7 +97,7 @@
         this.value = option
         // Resets the search to empty
         this.search = ''
-        // Closes the search when done
+        // Closes the search when doneg
         this.close()
       }
     }
