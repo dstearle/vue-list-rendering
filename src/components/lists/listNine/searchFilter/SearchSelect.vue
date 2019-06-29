@@ -32,6 +32,7 @@
 
       </ul>
 
+      <!-- If search result not found displays text -->
       <div v-show="filteredOptions.length === 0" class="search-select-empty">No results found for "{{ search }}"</div>
 
     </div>
