@@ -17,7 +17,11 @@
     <div v-show="isOpen" class="search-select-dropdown">
 
       <!-- Input for user -->
-      <input class="search-select-search" v-model="search">
+      <input 
+        class="search-select-search" 
+        v-model="search"
+        ref="search"
+      >
 
       <!-- List of items to be shown -->
       <ul class="search-select-options">
@@ -86,7 +90,11 @@
     methods: {
       // Opens the search list when clicked by user
       open() {
-        this.isOpen = true
+        this.isOpen = true,
+        this.$nextTick(() => {
+          // When search is opened puts focus into the input for user
+          this.$refs.search.focus()
+        })
       },
       // Closes the search list when an option is selected
       close() {
