@@ -12,7 +12,7 @@
         <div class="mb-4">
 
           <label class="form-label mb-2">Favorite Thrash Band</label>
-          <search-select></search-select>
+          <search-select v-model="selectedBand" :options="bands"></search-select>
           
         </div>
 
@@ -39,7 +39,24 @@ export default {
     SearchSelect
   },
   data() {
-    return {}
+    return {
+      selectedBand: null,
+      bands: [
+          "Anthrax",
+          "Dark Angel",
+          "Death Angel",
+          "Destruction",
+          "Exodus",
+          "Flotsam and Jetsam",
+          "Kreator",
+          "Megadeth",
+          "Metallica",
+          "Overkill",
+          "Sepultura",
+          "Slayer",
+          "Testament"
+        ]
+    }
   }
 }
 </script>
