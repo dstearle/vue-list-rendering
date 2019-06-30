@@ -49,26 +49,11 @@
 
   export default {
 
+    props: ['value', 'options'],
     data() {
       return {
         isOpen: false,
-        value: null,
         search: '',
-        options: [
-          "Anthrax",
-          "Dark Angel",
-          "Death Angel",
-          "Destruction",
-          "Exodus",
-          "Flotsam and Jetsam",
-          "Kreator",
-          "Megadeth",
-          "Metallica",
-          "Overkill",
-          "Sepultura",
-          "Slayer",
-          "Testament"
-        ]
       }
     },
 
@@ -105,7 +90,7 @@
       // Selects the item from the list
       select(option) {
         // Sets value to match the selected option
-        this.value = option
+        this.$emit('input', option)
         // Resets the search to empty
         this.search = ''
         // Closes the search when doneg
