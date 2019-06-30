@@ -49,7 +49,7 @@
 
   export default {
 
-    props: ['value', 'options'],
+    props: ['value', 'options', 'filterFunction'],
     data() {
       return {
         isOpen: false,
@@ -62,11 +62,7 @@
       // Filters the list with user input
       filteredOptions() {
 
-        return this.options.filter(option => {
-
-          return option.toLowerCase().startsWith(this.search.toLowerCase())
-
-        })
+        return this.filterFunction(this.search, this.options)
 
       }
 
