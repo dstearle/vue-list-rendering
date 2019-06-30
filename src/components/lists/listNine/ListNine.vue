@@ -12,7 +12,15 @@
         <div class="mb-4">
 
           <label class="form-label mb-2">Favorite Thrash Band</label>
-          <search-select v-model="selectedBand" :options="bands"></search-select>
+          <search-select 
+            v-model="selectedBand" 
+            :options="bands"
+            :filter-function="(search, options) => {
+              return options.filter(option => {
+                return option.toLowerCase().startsWith(search.toLowerCase())
+              })
+            }"
+          ></search-select>
           
         </div>
 
