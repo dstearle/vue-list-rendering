@@ -36,40 +36,42 @@
 
 <script>
 
-import SearchSelect from './searchFilter/SearchSelect.vue'
+  import SearchSelect from './searchFilter/SearchSelect.vue'
 
-export default {
-  components: {
-    SearchSelect
-  },
-  data() {
-    return {
-      selectedBand: null,
-      bands: [
-          "Anthrax",
-          "Dark Angel",
-          "Death Angel",
-          "Destruction",
-          "Exodus",
-          "Flotsam and Jetsam",
-          "Kreator",
-          "Megadeth",
-          "Metallica",
-          "Overkill",
-          "Sepultura",
-          "Slayer",
-          "Testament"
-        ]
-    }
-  },
-  methods: {
-    applySearchFilter(search, options) {
-      return options.filter(option => {
-        return option.toLowerCase().startsWith(search.toLowerCase())
-      })
+  export default {
+    components: {
+      SearchSelect
+    },
+    data() {
+      return {
+        selectedBand: null,
+        bands: [
+            "Anthrax",
+            "Dark Angel",
+            "Death Angel",
+            "Destruction",
+            "Exodus",
+            "Flotsam and Jetsam",
+            "Kreator",
+            "Megadeth",
+            "Metallica",
+            "Overkill",
+            "Sepultura",
+            "Slayer",
+            "Testament"
+          ]
+      }
+    },
+    methods: {
+      // Filters the list with user input
+      applySearchFilter(search, options) {
+        return options.filter(option => {
+          return option.toLowerCase().startsWith(search.toLowerCase())
+        })
+      }
     }
   }
-}
+
 </script>
 
 <style>

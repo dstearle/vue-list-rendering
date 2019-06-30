@@ -59,7 +59,7 @@
 
     computed: {
 
-      // Filters the list with user input
+      // applySearchFilter passed down through props
       filteredOptions() {
 
         return this.filterFunction(this.search, this.options)
