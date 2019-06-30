@@ -15,11 +15,7 @@
           <search-select 
             v-model="selectedBand" 
             :options="bands"
-            :filter-function="(search, options) => {
-              return options.filter(option => {
-                return option.toLowerCase().startsWith(search.toLowerCase())
-              })
-            }"
+            :filter-function="applySearchFilter"
           ></search-select>
           
         </div>
@@ -64,6 +60,13 @@ export default {
           "Slayer",
           "Testament"
         ]
+    }
+  },
+  methods: {
+    applySearchFilter(search, options) {
+      return options.filter(option => {
+        return option.toLowerCase().startsWith(search.toLowerCase())
+      })
     }
   }
 }
