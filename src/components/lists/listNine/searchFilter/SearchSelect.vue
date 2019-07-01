@@ -99,12 +99,12 @@
         // Closes the search when doneg
         this.close()
       },
-      // Allows us to move up the list with the up arrow key
+      // Allows user to move up the list with the up arrow key
       highlightPrev() {
         // Detracts plus one to the index to change the highlight position
         this.highlightedIndex = this.highlightedIndex - 1
       },
-      // Allows us to move down the list with the down arrow key
+      // Allows user to move down the list with the down arrow key
       highlightNext() {
         // Adds plus one to the index to change the highlight position
         this.highlightedIndex = this.highlightedIndex + 1
