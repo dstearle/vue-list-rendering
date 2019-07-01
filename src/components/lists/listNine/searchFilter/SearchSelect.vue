@@ -23,6 +23,7 @@
         v-model="search"
         ref="search"
         @keydown.esc="close"
+        @keydown.down="highlightNext"
       >
 
       <!-- List of items to be shown -->
@@ -96,6 +97,11 @@
         this.search = ''
         // Closes the search when doneg
         this.close()
+      },
+      // Allows us to move down the list with the down arrow key
+      highlightNext() {
+        // Adds plus one to the index to change the highlight position
+        this.highlightedIndex = this.highlightedIndex + 1
       }
     }
 
