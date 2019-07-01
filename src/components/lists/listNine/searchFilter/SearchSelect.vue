@@ -17,6 +17,7 @@
     <div v-show="isOpen" class="search-select-dropdown">
 
       <!-- Input for user -->
+      <!-- keydown.esc uses the close method -->
       <input 
         class="search-select-search" 
         v-model="search"
@@ -29,8 +30,10 @@
 
         <!-- Generates each item in the search list -->
         <!-- @click="select(option)" allows us to select an option from the list -->
-        <li class="search-select-option"
-          v-for="option in filteredOptions"
+        <li 
+          class="search-select-option"
+          :class="{ 'is-active': i === highlightedIndex}"
+          v-for="(option, i) in filteredOptions"
           :key="option"
           @click="select(option)"
         >{{ option }}</li>
@@ -55,6 +58,7 @@
       return {
         isOpen: false,
         search: '',
+        highlightedIndex: 0
       }
     },
 
