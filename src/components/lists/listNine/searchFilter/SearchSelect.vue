@@ -21,6 +21,7 @@
         class="search-select-search" 
         v-model="search"
         ref="search"
+        @keydown.esc="close"
       >
 
       <!-- List of items to be shown -->
