@@ -28,7 +28,7 @@
       >
 
       <!-- List of items to be shown -->
-      <ul class="search-select-options">
+      <ul ref="options" class="search-select-options">
 
         <!-- Generates each item in the search list -->
         <!-- @click="select(option)" allows us to select an option from the list -->
@@ -108,6 +108,9 @@
         if(this.highlightedIndex < 0) {
           this.highlightedIndex = this.filteredOptions.length - 1
         }
+
+        // Sets the list view to the index when user goes all the way up
+        this.$refs.options.children[this.highlightedIndex].scrollIntoView()
       },
       // Allows user to move down the list with the down arrow key
       highlightNext() {
