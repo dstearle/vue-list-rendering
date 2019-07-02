@@ -121,6 +121,9 @@
         if(this.highlightedIndex > this.filteredOptions.length - 1) {
           this.highlightedIndex = 0
         }
+
+        // Sets the list view to the index when user goes all the way down
+        this.$refs.options.children[this.highlightedIndex].scrollIntoView()
       }
     }
 
