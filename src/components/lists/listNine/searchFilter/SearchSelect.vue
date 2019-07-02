@@ -103,6 +103,11 @@
       highlightPrev() {
         // Detracts plus one to the index to change the highlight position
         this.highlightedIndex = this.highlightedIndex - 1
+
+        // Sets the index to opposite end of list if users goes all the way up
+        if(this.highlightedIndex < 0) {
+          this.highlightedIndex = this.filteredOptions.length - 1
+        }
       },
       // Allows user to move down the list with the down arrow key
       highlightNext() {
