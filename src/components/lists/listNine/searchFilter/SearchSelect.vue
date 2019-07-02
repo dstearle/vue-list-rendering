@@ -110,7 +110,7 @@
         }
 
         // Sets the list view to the index when user goes all the way up
-        this.$refs.options.children[this.highlightedIndex].scrollIntoView()
+        this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
       },
       // Allows user to move down the list with the down arrow key
       highlightNext() {
@@ -123,7 +123,7 @@
         }
 
         // Sets the list view to the index when user goes all the way down
-        this.$refs.options.children[this.highlightedIndex].scrollIntoView()
+        this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
       }
     }
 
