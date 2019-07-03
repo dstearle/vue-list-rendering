@@ -25,6 +25,7 @@
         @keydown.esc="close"
         @keydown.up="highlightPrev"
         @keydown.down="highlightNext"
+        @keydown.enter="selectHighlighted"
       >
 
       <!-- List of items to be shown -->
@@ -99,8 +100,14 @@
         // Closes the search when done
         this.close()
       },
+      // Selects the item
+      selectHighlighted() {
+        // Selects the current highlighted item by index
+        this.select(this.filteredOptions[this.highlightedIndex])
+      },
+      
       highlight(index) {
-        
+
         this.highlightedIndex = index
 
         // Detracts plus one to the index to change the highlight position
