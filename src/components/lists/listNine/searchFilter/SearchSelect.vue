@@ -99,31 +99,50 @@
         // Closes the search when done
         this.close()
       },
-      // Allows user to move up the list with the up arrow key
-      highlightPrev() {
-        // Detracts plus one to the index to change the highlight position
-        this.highlightedIndex = this.highlightedIndex - 1
+      highlight(index) {
+        
+        this.highlightedIndex = index
 
-        // Sets the index to opposite end of list if users goes all the way up
+        // Detracts plus one to the index to change the highlight position
         if(this.highlightedIndex < 0) {
           this.highlightedIndex = this.filteredOptions.length - 1
+        }
+
+        // Adds plus one to the index to change the highlight position
+        if(this.highlightedIndex > this.filteredOptions.length + 1) {
+          this.highlightedIndex = 0
         }
 
         // Sets the list view to the index when user goes all the way up
         this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
       },
+      // Allows user to move up the list with the up arrow key
+      highlightPrev() {
+        // Detracts plus one to the index to change the highlight position
+        // this.highlightedIndex = this.highlightedIndex - 1
+        this.highlight(this.highlightedIndex - 1)
+
+        // Sets the index to opposite end of list if users goes all the way up
+        // if(this.highlightedIndex < 0) {
+        //   this.highlightedIndex = this.filteredOptions.length - 1
+        // }
+
+        // Sets the list view to the index when user goes all the way up
+        // this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
+      },
       // Allows user to move down the list with the down arrow key
       highlightNext() {
         // Adds plus one to the index to change the highlight position
-        this.highlightedIndex = this.highlightedIndex + 1
+        // this.highlightedIndex = this.highlightedIndex + 1
+        this.highlight(this.highlightedIndex + 1)
 
         // Sets the index to opposite end of list if users goes all the way down
-        if(this.highlightedIndex > this.filteredOptions.length - 1) {
-          this.highlightedIndex = 0
-        }
+        // if(this.highlightedIndex > this.filteredOptions.length - 1) {
+        //   this.highlightedIndex = 0
+        // }
 
         // Sets the list view to the index when user goes all the way down
-        this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
+        // this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
       }
     }
 
