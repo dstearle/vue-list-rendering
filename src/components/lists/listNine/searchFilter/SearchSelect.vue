@@ -97,6 +97,8 @@
         this.$emit('input', option)
         // Resets the search to empty
         this.search = ''
+        // Sets index back to the start after selection
+        this.highlightedIndex = 0
         // Closes the search when done
         this.close()
       },
