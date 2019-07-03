@@ -105,7 +105,7 @@
         // Selects the current highlighted item by index
         this.select(this.filteredOptions[this.highlightedIndex])
       },
-      
+      // Refactor for highlightPrev & highlightNext
       highlight(index) {
 
         this.highlightedIndex = index
