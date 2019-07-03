@@ -79,10 +79,11 @@
     methods: {
       // Opens the search list when clicked by user
       open() {
-        this.isOpen = true,
+        this.isOpen = true
         this.$nextTick(() => {
           // When search is opened puts focus into the search input for user
           this.$refs.search.focus()
+          this.scrollToHighlighted()
         })
       },
       // Closes the search list when an option is selected
@@ -107,6 +108,10 @@
         // Selects the current highlighted item by index
         this.select(this.filteredOptions[this.highlightedIndex])
       },
+      scrollToHighlighted() {
+        // Sets the list view to the index when user goes all the way up
+        this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
+      },
       // Refactor for highlightPrev & highlightNext
       highlight(index) {
 
@@ -123,7 +128,7 @@
         }
 
         // Sets the list view to the index when user goes all the way up
-        this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
+        this.scrollToHighlighted()
       },
       // Allows user to move up the list with the up arrow key
       highlightPrev() {
