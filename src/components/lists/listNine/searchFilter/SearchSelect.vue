@@ -1,55 +1,60 @@
 <template>
 
-  <div class="search-select" :class="{ 'is-active': isOpen }">
+  <!-- Allows us to close search list by clicking outside window -->
+  <!-- <on-click-outside :do="close"> -->
 
-    <!-- Button that controls search list -->
-    <button @click="open" type="button" class="search-select-input">
+    <div class="search-select" :class="{ 'is-active': isOpen }">
 
-      <!-- Displays selected value -->
-      <span v-if="value !== null">{{ value }}</span>
+      <!-- Button that controls search list -->
+      <button @click="open" type="button" class="search-select-input">
 
-      <!-- Default value if nothing has been selected -->
-      <span v-else class="search-select-placeholder">Select a band...</span>
+        <!-- Displays selected value -->
+        <span v-if="value !== null">{{ value }}</span>
 
-    </button>
+        <!-- Default value if nothing has been selected -->
+        <span v-else class="search-select-placeholder">Select a band...</span>
 
-    <!-- Shows the dropdown list when activated -->
-    <div v-show="isOpen" class="search-select-dropdown">
+      </button>
 
-      <!-- Input for user -->
-      <!-- keydown.esc uses the close method -->
-      <input 
-        class="search-select-search" 
-        v-model="search"
-        ref="search"
-        @keydown.esc="close"
-        @keydown.up="highlightPrev"
-        @keydown.down="highlightNext"
-        @keydown.enter="selectHighlighted"
-        @keydown.tab.prevent
-      >
+      <!-- Shows the dropdown list when activated -->
+      <div v-show="isOpen" class="search-select-dropdown">
 
-      <!-- List of items to be shown -->
-      <ul ref="options" class="search-select-options">
+        <!-- Input for user -->
+        <!-- keydown.esc uses the close method -->
+        <input 
+          class="search-select-search" 
+          v-model="search"
+          ref="search"
+          @keydown.esc="close"
+          @keydown.up="highlightPrev"
+          @keydown.down="highlightNext"
+          @keydown.enter="selectHighlighted"
+          @keydown.tab.prevent
+        >
 
-        <!-- Generates each item in the search list -->
-        <!-- @click="select(option)" allows us to select an option from the list -->
-        <li 
-          class="search-select-option"
-          :class="{ 'is-active': i === highlightedIndex}"
-          v-for="(option, i) in filteredOptions"
-          :key="option"
-          @click="select(option)"
-        >{{ option }}</li>
+        <!-- List of items to be shown -->
+        <ul ref="options" class="search-select-options">
 
-      </ul>
+          <!-- Generates each item in the search list -->
+          <!-- @click="select(option)" allows us to select an option from the list -->
+          <li 
+            class="search-select-option"
+            :class="{ 'is-active': i === highlightedIndex}"
+            v-for="(option, i) in filteredOptions"
+            :key="option"
+            @click="select(option)"
+          >{{ option }}</li>
 
-      <!-- If search result not found displays text -->
-      <div v-show="filteredOptions.length === 0" class="search-select-empty">No results found for "{{ search }}"</div>
+        </ul>
+
+        <!-- If search result not found displays text -->
+        <div v-show="filteredOptions.length === 0" class="search-select-empty">No results found for "{{ search }}"</div>
+
+      </div>
 
     </div>
 
-  </div>
+  <!-- </on-click-outside> -->
   
 </template>
 
