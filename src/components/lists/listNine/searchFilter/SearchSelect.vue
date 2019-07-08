@@ -26,6 +26,7 @@
         @keydown.up="highlightPrev"
         @keydown.down="highlightNext"
         @keydown.enter="selectHighlighted"
+        @keydown.tab.prevent
       >
 
       <!-- List of items to be shown -->
