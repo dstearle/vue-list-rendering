@@ -79,6 +79,9 @@
     methods: {
       // Opens the search list when clicked by user
       open() {
+        if(this.isOpen) {
+          return
+        }
         this.isOpen = true
         this.$nextTick(() => {
           // When search is opened puts focus into the search input for user
