@@ -1,7 +1,7 @@
 <template>
 
   <!-- Allows us to close search list by clicking outside window -->
-  <!-- <on-click-outside :do="close"> -->
+  <on-click-outside :do="close">
 
     <div class="search-select" :class="{ 'is-active': isOpen }">
 
@@ -54,14 +54,19 @@
 
     </div>
 
-  <!-- </on-click-outside> -->
+  </on-click-outside>
   
 </template>
 
 <script>
 
+  import OnClickOutside from './OnClickOutside.vue'
+
   export default {
 
+    components: {
+      OnClickOutside
+    },
     props: ['value', 'options', 'filterFunction'],
     data() {
       return {
