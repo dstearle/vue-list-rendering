@@ -102,6 +102,10 @@
       },
       // Closes the search list when an option is selected
       close() {
+        // Prevents focus from happening if list is not open
+        if (!this.isOpen) {
+          return
+        }
         this.isOpen = false,
         // Sets focus back to input area when search is closed
         this.$refs.button.focus()
