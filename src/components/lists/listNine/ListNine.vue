@@ -13,8 +13,8 @@
 
           <label class="form-label mb-2">Complete Embryos</label>
           <search-select 
-            v-model="selectedBand" 
-            :options="bands"
+            v-model="selectedEmbryo" 
+            :options="embryos"
             :filter-function="applySearchFilter"
           ></search-select>
           
@@ -44,14 +44,14 @@
     },
     data() {
       return {
-        selectedBand: null,
-        bands: [
+        selectedEmbryo: null,
+        embryos: [
             "Apatosaurus",
             "Suchomimus",
             "Dryosaurus",
             "Kentrosaurus",
             "Velociraptor",
-            "Metricanthosaurus",
+            "Pachyrhinosaurus",
             "Brachiosaurus",
             "Iguanodon",
             "T-Rex",
