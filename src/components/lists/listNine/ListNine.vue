@@ -2,8 +2,8 @@
 
   <div class="container">
 
-    <h2 class="py-5">InGen Contact List</h2>
-    <p>Feel free to sort the list however you like with the blocks on the right</p>
+    <h2 class="py-5">InGen Embryo List</h2>
+    <p>Search for and select a dinosaur embryo below</p>
 
     <div class="card">
       
@@ -11,7 +11,7 @@
 
         <div class="mb-4">
 
-          <label class="form-label mb-2">Favorite Thrash Band</label>
+          <label class="form-label mb-2">Complete Embryos</label>
           <search-select 
             v-model="selectedBand" 
             :options="bands"
@@ -46,19 +46,19 @@
       return {
         selectedBand: null,
         bands: [
-            "Anthrax",
-            "Dark Angel",
-            "Death Angel",
-            "Destruction",
-            "Exodus",
-            "Flotsam and Jetsam",
-            "Kreator",
-            "Megadeth",
-            "Metallica",
-            "Overkill",
-            "Sepultura",
-            "Slayer",
-            "Testament"
+            "Apatosaurus",
+            "Suchomimus",
+            "Dryosaurus",
+            "Kentrosaurus",
+            "Velociraptor",
+            "Metricanthosaurus",
+            "Brachiosaurus",
+            "Iguanodon",
+            "T-Rex",
+            "Proceratosaurus",
+            "Dracorex",
+            "Carnotaurus",
+            "Mamenchisaurus"
           ]
       }
     },
