@@ -6,7 +6,7 @@
     <div class="search-select" :class="{ 'is-active': isOpen }">
 
       <!-- Button that controls search list -->
-      <button @click="open" type="button" class="search-select-input">
+      <button ref="button" @click="open" type="button" class="search-select-input">
 
         <!-- Displays selected value -->
         <span v-if="value !== null">{{ value }}</span>
@@ -108,8 +108,7 @@
         }
         this.isOpen = false
         // Sets focus back to input area when search is closed
-        // Cuases error?
-        // this.$refs.button.focus()
+        this.$refs.button.focus()
       },
       // Selects the item from the list
       select(option) {
