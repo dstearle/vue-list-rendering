@@ -141,7 +141,7 @@
         }
 
         // Adds plus one to the index to change the highlight position
-        if(this.highlightedIndex > this.filteredOptions.length + 1) {
+        if(this.highlightedIndex > this.filteredOptions.length - 1) {
           this.highlightedIndex = 0
         }
 
