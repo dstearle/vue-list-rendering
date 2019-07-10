@@ -72,7 +72,7 @@ export default {
           id: 1,
           name: "John Hammond",
           email: "slammin.hammond@ingen.com",
-          avatar: "./../avatars/test.jpg"
+          avatar: require("./../avatars/19.jpg")
         },
         {
           id: 2,
