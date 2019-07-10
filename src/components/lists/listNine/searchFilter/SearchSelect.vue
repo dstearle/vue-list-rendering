@@ -39,7 +39,7 @@
           <!-- @click="select(option)" allows us to select an option from the list -->
           <li 
             class="search-select-option"
-            :class="{ 'is-active': i === highlightedIndex}"
+            :class="{ 'is-active': i === highlightedIndex }"
             v-for="(option, i) in filteredOptions"
             :key="option"
             @click="select(option)"
@@ -106,16 +106,17 @@
         if (!this.isOpen) {
           return
         }
-        this.isOpen = false,
+        this.isOpen = false
         // Sets focus back to input area when search is closed
-        this.$refs.button.focus()
+        // Cuases error?
+        // this.$refs.button.focus()
       },
       // Selects the item from the list
       select(option) {
         // Sets value to match the selected option
         this.$emit('input', option)
         // Resets the search to empty
-        this.search = ''
+        this.search = ""
         // Sets index back to the start after selection
         this.highlightedIndex = 0
         // Closes the search when done
