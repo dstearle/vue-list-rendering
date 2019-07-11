@@ -84,7 +84,7 @@ export default {
           id: 3,
           name: "Henry Wu",
           email: "wu.tang.clan@ingen.com",
-          avatar: "https://randomuser.me/api/portraits/med/women/2.jpg"
+          avatar: require("./../avatars/Henry_Wu.jpg")
         },
         {
           id: 4,
