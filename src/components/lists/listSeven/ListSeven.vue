@@ -78,7 +78,7 @@ export default {
           id: 2,
           name: "Robert Muldoon",
           email: "muldoon.safaris@ingen.com",
-          avatar: require("./../avatars/muldoonicon.jpg")
+          avatar: require("./../avatars/Robert_Muldoon.jpg")
         },
         {
           id: 3,
@@ -90,7 +90,7 @@ export default {
           id: 4,
           name: "Denis Nedry",
           email: "mr.goodbytes@ingen.com",
-          avatar: "https://randomuser.me/api/portraits/med/women/62.jpg"
+          avatar: require("./../avatars/Dennis_Nedry.jpg")
         },
         {
           id: 5,
