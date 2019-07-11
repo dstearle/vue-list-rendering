@@ -96,7 +96,7 @@ export default {
           id: 5,
           name: "Ray Arnold",
           email: "big.ray@ingen.com",
-          avatar: "https://randomuser.me/api/portraits/med/men/4.jpg"
+          avatar: require("./../avatars/Ray_Arnold.jpg")
         }
       ]
     }
