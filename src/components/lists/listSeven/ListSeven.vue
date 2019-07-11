@@ -78,7 +78,7 @@ export default {
           id: 2,
           name: "Robert Muldoon",
           email: "muldoon.safaris@ingen.com",
-          avatar: "https://randomuser.me/api/portraits/med/men/19.jpg"
+          avatar: require("./../avatars/muldoonicon.jpg")
         },
         {
           id: 3,
