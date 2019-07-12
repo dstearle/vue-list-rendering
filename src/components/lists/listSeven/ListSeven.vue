@@ -38,7 +38,7 @@
                   <!-- Favicon that allows user to move contact -->
                   <sortable-handle class="pointer">
                     <div>
-                      <img src="./../avatars/c05afe5afc5c5fd246eb854b730c9074.png" class="contact-list-avatar" alt="">
+                      <img src="./../avatars/c05afe5afc5c5fd246eb854b730c9074.png" class="contact-list-favicon" alt="">
                     </div>
                   </sortable-handle>
 
@@ -138,6 +138,14 @@ export default {
 .contact-list-avatar {
   height: 3rem;
   width: 3rem;
+  border-radius: 9999px;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+.contact-list-favicon {
+  height: 2.5rem;
+  width: 2.5srem;
   border-radius: 9999px;
   display: block;
   margin-right: 0.5rem;
