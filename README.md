@@ -24,3 +24,4 @@ https://www.npmjs.com/package/@shopify/draggable.
 - Make better navbar for application
 - Make table of contents for home page
 - Fix dropdown favicon for ListEight
+- Fix favicons for List Seven
