@@ -38,7 +38,7 @@
                   <!-- Favicon that allows user to move contact -->
                   <sortable-handle class="pointer">
                     <div>
-                      <img src="./../avatars/c05afe5afc5c5fd246eb854b730c9074.png" class="contact-list-favicon" alt="">
+                      <img src="./../avatars/JPLogo.png" class="contact-list-favicon" alt="">
                     </div>
                   </sortable-handle>
 
