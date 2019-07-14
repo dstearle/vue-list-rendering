@@ -1,9 +1,11 @@
 <template>
     
-    <div class="py-5">
+    <div class="container">
 
-        Welcome to the home page. Feel free to click around and see different lists.
-        
+        <h2 class="py-5">Table Of Contents</h2>
+
+        <p>Welcome to the home page. Below is a description of the available lists to be viewed.</p>
+
     </div>
     
 </template>
