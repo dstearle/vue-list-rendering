@@ -1,6 +1,5 @@
 # vue-list-rendering
 
-
 <strong>What is this project? :</strong>
 
 - The vue-list-rendering project is a collection of different lists made in vue.
