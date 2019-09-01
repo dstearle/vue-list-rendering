@@ -4,12 +4,12 @@
         <ul class="list-group">
 
             <li 
-            v-for="(score, dinosaurs) of topTenHerbivores" 
-            v-bind:key="dinosaurs"
+            v-for="(score, dinosaur) of topTenHerbivores" 
+            v-bind:key="dinosaur"
             class="list-group-item d-flex justify-content-between align-items-center"
             >
 
-                {{ dinosaurs }}
+                {{ dinosaur }}
                 <span class="badge badge-primary badge-pill">{{ score }}</span>
             </li>
         </ul>
