@@ -8,11 +8,11 @@
                 <th>Biosyn Score</th>
                 <th>Overall Score</th>
             </tr>
-            <tr v-for="dinosaurs of topTenDinosaurs">
-                <td>{{ dinosaurs.name }}</td>
-                <td>{{ dinosaurs.ingen }}</td>
-                <td>{{ dinosaurs.biosyn }}</td>
-                <td>{{ dinosaurs.overall }}</td>
+            <tr v-for="dinosaur of topTenDinosaurs" v-bind:key="dinosaur.name">
+                <td>{{ dinosaur.name }}</td>
+                <td>{{ dinosaur.ingen }}</td>
+                <td>{{ dinosaur.biosyn }}</td>
+                <td>{{ dinosaur.overall }}</td>
             </tr>
         </table>
     </div>
