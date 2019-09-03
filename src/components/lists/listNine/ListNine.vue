@@ -1,7 +1,8 @@
 <template>
 
-  <div class="container">
+  <div class="container" style="width: 450px">
 
+    <!-- Title -->
     <h2 class="py-5">InGen Embryo List</h2>
     <p>Search for and select a dinosaur embryo below</p>
 
@@ -11,7 +12,10 @@
 
         <div class="mb-4">
 
+          <!-- Label For Card -->
           <label class="form-label mb-2">Complete Embryos</label>
+
+          <!-- Search Select Input -->
           <search-select 
             v-model="selectedEmbryo" 
             :options="embryos"
@@ -22,6 +26,7 @@
 
         <div class="text-right">
 
+          <!-- Save Button (Not Currently In Use) -->
           <button type="button" class="btn btn-primary">Save Changes</button>
 
         </div>
@@ -39,13 +44,20 @@
   import SearchSelect from './searchFilter/SearchSelect.vue'
 
   export default {
+
     components: {
+
       SearchSelect
+
     },
+
     data() {
+
       return {
+
         selectedEmbryo: null,
         embryos: [
+
             "Apatosaurus",
             "Suchomimus",
             "Dryosaurus",
@@ -59,17 +71,27 @@
             "Dracorex",
             "Carnotaurus",
             "Mamenchisaurus"
+
           ]
+
       }
+
     },
+
     methods: {
+
       // Filters the list with user input
       applySearchFilter(search, options) {
+
         return options.filter(option => {
           return option.toLowerCase().startsWith(search.toLowerCase())
+
         })
+
       }
+
     }
+    
   }
 
 </script>
