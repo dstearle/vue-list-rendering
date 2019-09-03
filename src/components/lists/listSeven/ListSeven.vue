@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+    <div class="container" style="width: 450px">
 
       <h2 class="py-5">InGen Contact List</h2>
       <p>You can sort the contacts in the list by clicking and dragging the logos on the right!</p>
 
-      <div class="card" style="width: 400px">
+      <div class="card">
 
         <h1 class="card-header bg-dark text-white p-3">InGen Contacts</h1>
 
