@@ -4,16 +4,20 @@
        
         <div class="row">
            
-            <!-- Title -->
-            <h1>Rendering Lists in Vue</h1>
-            
-            <hr>
+            <div>
+               
+                <!-- Title -->
+                <h1>Rendering Lists in Vue</h1>
+                
+                <hr>
 
-            <!-- Nav Area -->
-            <app-header></app-header>
-            
-            <!-- List Views -->
-            <router-view class="ml-0" style="width: 450px"></router-view>
+                <!-- Nav Area -->
+                <app-header></app-header>
+                
+                <!-- List Views -->
+                <router-view class="ml-0" style="width: 450px"></router-view>
+                
+            </div>
             
         </div>
         
