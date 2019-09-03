@@ -1,8 +1,12 @@
 <template>
+
   <div class="accordion-list">
+
     <!-- Slot for the entire list -->
     <slot></slot>
+
   </div>
+
 </template>
 
 <script>
@@ -11,20 +15,32 @@
 
     // Allows you to provide an item without using props
     provide() {
+
       return {
+
         // Grabs the data object to be provided to the list
         accordionListState: this.sharedState
+
       }
+
     },
+
     data() {
+
       return {
+
         // Allows us to make the activeItem reactive
         sharedState: {
+
           // The current active list item
           activeItem: 1
+
         }
+
       }
+    
     }
+    
   }
 
 </script>
