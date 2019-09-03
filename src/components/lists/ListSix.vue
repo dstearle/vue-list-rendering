@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h2 class="py-5">Top 10 Jurassic Park Carnivores</h2>
+        <p>The list below sorts and unsorted array from lowest score to highest...</p>
         <p>Click on "Score" to sort the list from ascending or descending order!</p>
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
