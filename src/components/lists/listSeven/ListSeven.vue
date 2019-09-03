@@ -2,9 +2,9 @@
     <div class="container">
 
       <h2 class="py-5">InGen Contact List</h2>
-      <p>Feel free to sort the list however you like with the blocks on the right</p>
+      <p>You can sort the contacts in the list by clicking and dragging the logos on the right!</p>
 
-      <div class="card">
+      <div class="card" style="width: 400px">
 
         <h1 class="card-header bg-dark text-white p-3">InGen Contacts</h1>
 
