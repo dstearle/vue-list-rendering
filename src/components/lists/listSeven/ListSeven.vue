@@ -1,15 +1,18 @@
 <template>
-    <div class="container" style="width: 450px">
+    <div class="container">
 
+      <!-- Title -->
       <h2 class="py-5">InGen Contact List</h2>
       <p>You can sort the contacts in the list by clicking and dragging the logos on the right!</p>
 
       <div class="card">
 
+        <!-- Card Title -->
         <h1 class="card-header bg-dark text-white p-3">InGen Contacts</h1>
 
         <div class="card-body">
 
+          <!-- Contact List -->
           <sortable-list v-model="contacts">
 
             <div class="contact-list" slot-scope="{ items: contacts }">
@@ -21,25 +24,32 @@
 
                   <!-- Contact -->
                   <div class="contact-list-contact">
+
                     <!-- Contact's profile image -->
                     <img :src="contact.avatar" class="contact-list-avatar" alt="">
+
                     <div>
+
                       <!-- Contact's name -->
-                      <div class="font-weight-bold">
-                        {{ contact.name }}
-                      </div>
+                      <div class="font-weight-bold">{{ contact.name }}</div>
+
                       <!-- Contact's email  -->
-                      <div class="text-muted">
-                        {{ contact.email }}
-                      </div>
+                      <div class="text-muted">{{ contact.email }}</div>
+
                     </div>
+
                   </div>
                   
                   <!-- Favicon that allows user to move contact -->
                   <sortable-handle class="pointer">
+
                     <div>
+
+                      <!-- Favicon Image -->
                       <img src="./../avatars/JPLogo.png" class="contact-list-favicon" alt="">
+
                     </div>
+
                   </sortable-handle>
 
                 </div>
@@ -51,8 +61,11 @@
           </sortable-list>
 
         </div>
+
       </div>
+
     </div>
+
 </template>
 
 <script>
@@ -62,14 +75,21 @@ import SortableItem from "./sortables/SortableItem.vue"
 import SortableHandle from "./sortables/SortableHandle.vue"
 
 export default {
+
   components: {
+
     SortableList,
     SortableItem,
-    SortableHandle
+    SortableHandle,
+
   },
+
   data() {
+
     return {
+
       contacts: [
+
         {
           id: 1,
           name: "John Hammond",
@@ -100,9 +120,13 @@ export default {
           email: "big.ray@ingen.com",
           avatar: require("./../avatars/Ray_Arnold.jpg")
         }
+
       ]
+
     }
+
   },
+
 }
 
 </script>
@@ -112,10 +136,12 @@ export default {
 .pointer {
   cursor: grab;
 }
+
 .contact-list {
   border-top-width: 1px;
   border-color: #f1f5f8;
 }
+
 .contact-list-item {
   background-color: #fff;
   display: flex;
@@ -125,16 +151,20 @@ export default {
   border-bottom-width: 1px;
   border-color: #f1f5f8;
 }
+
 .contact-list-item.draggable-source--is-dragging {
   background-color: #f1f5f8;
 }
+
 .contact-list-item.draggable-source--is-dragging > * {
   opacity: 0;
 }
+
 .contact-list-contact {
   display: flex;
   align-items: center;
 }
+
 .contact-list-avatar {
   height: 3rem;
   width: 3rem;

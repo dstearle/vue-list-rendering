@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container" style="width: 450px">
+  <div class="container">
 
     <!-- Title -->
     <h2 class="py-5">InGen Embryo List</h2>
@@ -91,7 +91,7 @@
       }
 
     }
-    
+
   }
 
 </script>

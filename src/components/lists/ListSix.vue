@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container" style="width: 450px">
+    <div class="container">
 
         <!-- List Title -->
         <h2 class="py-5">Top 10 Jurassic Park Carnivores</h2>
